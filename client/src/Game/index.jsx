@@ -16,9 +16,11 @@ import io from "socket.io-client";
 
 let socket;
 if (import.meta.env.MODE === "development") {
+  console.log("development");
   socket = io("http://localhost:3001");
 } else {
-  socket = io(import.meta.env.VITE_SERVER_URL);
+  console.log("production");
+  socket = io("https://juego-asteroid-production.up.railway.app/");
 }
 
 const Score = styled.div`
@@ -44,7 +46,7 @@ const Users = styled.div`
 `;
 
 const initialState = {
-  user: localStorage.getItem("user") || "",
+  user: localStorage.getItem("user"),
   score: 0,
   largeAsteroidsKilled: 0,
   mediumAsteroidsKilled: 0,
@@ -162,7 +164,6 @@ const Game = () => {
     setIsMultiplayer(true);
     setShowStartModal(false);
     setGameState(initialState);
-    // SetUsersScore([{ user: localStorage.getItem("user"), score: 0 }]);
   };
 
   let kp = { u: false, l: false, r: false, s: false };

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import NumberCounter from 'number-counter';
+import NumberCounter  from 'number-counter';
 
 const GameoverContainer = styled.div`
     width: 300px;
@@ -57,19 +57,6 @@ const Flex = styled.div`
 
 
 const GameOver = ({finalState}) => {
-
-    useEffect(() => {
-        // var xmlhttp = new XMLHttpRequest();
-        // xmlhttp.onreadystatechange = function() {
-        // if (this.readyState === 4 && this.status === 200) {
-        //     var myObj = JSON.parse(this.responseText);
-        //     console.log('response', myObj);
-        // }
-        // };
-        // xmlhttp.open("POST", "https://ryan-arveseth.com/upload.php", true);
-        // xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        // xmlhttp.send("score=" + finalState.score);
-    }, []);
 
     return (
     <GameoverContainer>

@@ -9,7 +9,7 @@ import cors from "cors";
 // import app from "./app.js";
 const PORT = process.env.PORT | 3001;
 // app.listen(PORT);
-console.log(`Server on port http://localhost:${PORT}`);
+console.log(`Server on port ${PORT}`);
 
 // Initializations
 const app = express();
@@ -46,4 +46,4 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT);
-console.log(`server on port ${PORT}`);
+console.log(`server listen on port ${PORT}`);

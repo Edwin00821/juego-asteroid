@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StartContainer = styled.div`
@@ -100,7 +100,7 @@ const UserForm = styled.div`
   font-family: "Russo One", sans-serif;
   font-size: 24px;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0);
 `;
 const UserInput = styled.input`
   transition: 0.5s;
