@@ -17,11 +17,13 @@ import io from "socket.io-client";
 let socket;
 if (import.meta.env.MODE === "development") {
   console.log("development");
-  socket = io("http://localhost:3001");
+  // socket = io("http://localhost:3001");
+  socket = io("https://juego-asteroid-production.up.railway.app");
 } else {
   console.log("production");
-  socket = io("https://juego-asteroid-production.up.railway.app/");
+  socket = io("https://juego-asteroid-production.up.railway.app");
 }
+console.log(socket);
 
 const Score = styled.div`
   position: fixed;
