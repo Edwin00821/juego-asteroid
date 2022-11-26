@@ -128,7 +128,6 @@ const Start = ({ start, startMltiplayer }) => {
   const [multiPlayer, setMultiPlayer] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     if (e.keyCode === 13) {
       console.log("se inicio el juego multijugador ");
       localStorage.setItem("user", userName);
@@ -139,6 +138,11 @@ const Start = ({ start, startMltiplayer }) => {
   const handleClick = (e) => {
     e.preventDefault();
     setMultiPlayer(true);
+  };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setUserName(e.target.value);
   };
 
   return (
@@ -159,9 +163,8 @@ const Start = ({ start, startMltiplayer }) => {
             type="text"
             name="User"
             value={userName}
-            onChange={(e) => setUserName(e.target.value)}
-            onKeyUp={handleSubmit}
             onKeyDown={handleSubmit}
+            onChange={handleChange}
             autoFocus
           />
 

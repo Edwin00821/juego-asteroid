@@ -23,7 +23,6 @@ if (import.meta.env.MODE === "development") {
   console.log("production");
   socket = io("https://juego-asteroid-production.up.railway.app");
 }
-console.log(socket);
 
 const Score = styled.div`
   position: fixed;
@@ -152,9 +151,6 @@ const Game = () => {
     }
   }, [gameState.score]);
 
-  useEffect(() => {
-    console.log(isMultiplayer);
-  }, [isMultiplayer]);
 
   const startGame = () => {
     setShowStartModal(false);
@@ -403,9 +399,6 @@ const Game = () => {
     if (userValid === false) SetUsersScore([...UsersScore, userSocket]);
   };
 
-  useEffect(() => {
-    console.log(UsersScore);
-  }, [UsersScore]);
 
   const validateUser = (user, validateUsers) => user === validateUsers;
 
