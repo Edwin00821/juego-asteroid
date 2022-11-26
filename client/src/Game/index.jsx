@@ -144,7 +144,6 @@ const Game = () => {
   const [isMultiplayer, setIsMultiplayer] = useState(false);
 
   useEffect(() => {
-    console.log("gameState", gameState);
     if (isMultiplayer) {
       socket.emit("score", { score: gameState.score, user: gameState.user });
       socket.on("score", SetUsers);

@@ -128,7 +128,6 @@ const Start = ({ start, startMltiplayer }) => {
   const [multiPlayer, setMultiPlayer] = useState(false);
 
   const handleSubmit = (e) => {
-    console.log(e);
     e.preventDefault();
     if (e.keyCode === 13) {
       console.log("se inicio el juego multijugador ");
@@ -138,7 +137,6 @@ const Start = ({ start, startMltiplayer }) => {
   };
 
   const handleClick = (e) => {
-    console.log(e);
     e.preventDefault();
     setMultiPlayer(true);
   };
